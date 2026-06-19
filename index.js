@@ -3,7 +3,7 @@ const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require('discord.js');
 const { token } = require('./config.json'); //has tokens
 const  registerCommands = require('./commands/utility/command-handler.js'); //checks commands
-const { CronJob } = require('cron'); // for timer
+const cron = require ('node-cron'); // for timer
 const sendMessage = require('./commands/utility/send-question.js');
 const michaelMonday = require('./commands/utility/michael-monday.js');
 
@@ -40,13 +40,13 @@ client.once(Events.ClientReady, (readyClient) => {
   	const seconds = totalSeconds % 60;
 
   	console.log(`Time until 8:30 AM: ${hours}h ${minutes}m ${seconds}s`);
-	
+
 
 	//start question timer
-	const job = new CronJob('0 30 13 * * *', async () => {
+	const task = new cron.schedule('0 30 13 * * *', async () => {
 
 		//at 8:30am, send question
-		sendMessage();
+		await sendMessage();
 
 		//check if it's monday
 		const d = new Date();
@@ -56,9 +56,14 @@ client.once(Events.ClientReady, (readyClient) => {
 			michaelMonday(); //excute michael monday script
 		} else {
 			console.log("not monday :(");
-		}
-	});
+		}}, //function
+		true,); //start job
+	//check it's running
+	console.log("Question timer is:" + task.getStatus());
+	console.log("Next run is " + task.getNextRun());
+
 });
+
 
 client.on(Events.InteractionCreate, async interaction => {
     // Ignore interactions that are not slash commands

@@ -15,7 +15,7 @@ Once you have your VPS set up, download and unzip the project. Switch to the pro
 - Google sheets API (to talk to the spreadsheet)
 - Express (see above)
 - Ejs (see above)
-- Cron (for timer based functions)
+- node-cron (for timer based functions)
 
 Next, we need those credentials mentioned earlier. [This tutorial](https://youtu.be/PFJNJQCU_lo?si=WoxiLTKM_vvgAZTc
 ) will walk you through how to create the credentials.json file we need, as well as installing the dependencies. (Follow along until about 6:50, the rest is irrelevant for our purposes)
