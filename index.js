@@ -25,7 +25,7 @@ client.once(Events.ClientReady, (readyClient) => {
 
  	 // build target for today at 08:30
   	const target = new Date(now);
-  	target.setHours(8, 30, 0, 0);
+  	target.setHours(13, 30, 0, 0);
 
   	// if target already passed, use tomorrow
   	if (now >= target) {
@@ -43,7 +43,7 @@ client.once(Events.ClientReady, (readyClient) => {
 	
 
 	//start question timer
-	const job = new CronJob('0 30 08 * * *', async () => {
+	const job = new CronJob('0 30 13 * * *', async () => {
 
 		//at 8:30am, send question
 		sendMessage();
