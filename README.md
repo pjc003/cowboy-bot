@@ -16,7 +16,7 @@
 6. [credits](#credits)
 
 ## Description
-posts daily questions . also michael monday.
+Posts daily questions. also michael monday.
 
 ## Install
 1. clone the repo
@@ -58,9 +58,9 @@ if you need to change any of these values, either run set-up again or edit the .
 
 ## Credits
 
-Written by peter, based on michael-monday-bot, with minor assistance from copilot (mostly reading error codes)
+Written by peter, based on [michael-monday-bot](https://github.com/breadcrustbandit/michael-monday-bot) (including ripping this readme), with minor assistance from copilot (mostly reading error codes)
 
-uses the discordjs framework and snippets of code from discordjs's guide on making a discord bot. discordjs's guide is under an MIT license, and is included in this repo as LICENSE.txt.
+uses the discordjs framework and snippets of code from discordjs's guide on making a discord bot. discordjs's guide is under an MIT license
 
 google sheets quickstart from here: https://developers.google.com/sheets/api/quickstart/nodejs
 
