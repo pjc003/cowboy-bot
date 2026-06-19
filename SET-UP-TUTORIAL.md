@@ -20,16 +20,16 @@ Once you have your VPS set up, download and unzip the project. Switch to the pro
 Next, we need those credentials mentioned earlier. [This tutorial](https://youtu.be/PFJNJQCU_lo?si=WoxiLTKM_vvgAZTc
 ) will walk you through how to create the credentials.json file we need, as well as installing the dependencies. (Follow along until about 6:50, the rest is irrelevant for our purposes)
 
-```
+
 Key troubleshooting:
 If it won’t let you make keys, switch to the organization level, go to the IAM page and add the “Organization Policy Administrator” role to yourself. Then under the organization policies page, disable the following policies:
 
-	iam.managed.disableServiceAccountKeyCreation
-	iam.disableServiceAccountKeyCreation
+`iam.managed.disableServiceAccountKeyCreation`
+`iam.disableServiceAccountKeyCreation`
 
 After you’ve done that, try to make the keys again. This is probably very insecure, so be very careful about making sure your credentials.json file isn’t shared.
 
-```
+
 ## Server Set Up
 
 This bot utilizes webhooks to send messages to the server. [Here's a link](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) to the official discord documentation on how to do this. 
