@@ -3,15 +3,13 @@
 ## Table of Contents
 1. [description](#description)
 
-2. [to-do list](#to-do-list)
+2. [install](#install)
 
-3. [install](#install)
-
-4. [commands](#commands)
+3. [commands](#commands)
 
 4. [config](#install)
 
-5. [script usage](#script-usage)
+5. [scripts](#scripts)
 
 6. [credits](#credits)
 
