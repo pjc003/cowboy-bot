@@ -21,7 +21,7 @@ printf "\t\"clientId\": \"$clientID\",\n" >> config.json
 printf "\t\"guildId\": \"$serverID\",\n" >> config.json
 printf "\t\"michael_hookURL\": \"$mmHook\",\n" >> config.json
 printf "\t\"question_hookURL\": \"$qHook\",\n" >> config.json
-printf "\t\"spreadsheetId\": \"$sheetID\n" >> config.json
+printf "\t\"spreadsheetId\": \"$sheetID\", \n" >> config.json
 printf "}\n" >> config.json
 
 echo "config.json updated."
