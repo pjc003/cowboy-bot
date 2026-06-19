@@ -18,7 +18,7 @@ rm -f config.json #if config.json already exists, delete it
 printf "{\n" >> config.json
 printf "\t\"token\": \"$botToken\",\n" >> config.json
 printf "\t\"clientId\": \"$clientID\",\n" >> config.json
-printf "\t\"guildId\": "\"$serverID\",\n" >> config.json
+printf "\t\"guildId\": \"$serverID\",\n" >> config.json
 printf "\t\"michael_hookURL\": \"$mmHook\",\n" >> config.json
 printf "\t\"question_hookURL\": \"$qHook\",\n" >> config.json
 printf "\t\"spreadsheetId\": \"$sheetID\n" >> config.json
